@@ -6,37 +6,68 @@
     <link rel="icon" type="image/jpg" href="images/headSample.webp">
 </head>
 
-<script>
-</script>
+<!--
+    # The container class is the Primary Parent of all the sub-classes inside the body tag.
+    # The box class is the enclosing class- for all the child within the container.
+    # The top-box class represents the top portion of the Web Page- which includes: 
+    #    1. current-info
+    #    2. timeline
+    # The current-info class is divided into: 1. upper-half, 2. lower-half
+    # The timeline class has a wrapper-box, which contains time, vertical-line, icons and temperature.
+    # The tail-box contains the rest of the body: city-cards and continents-cities-cards.
+    # The other child classes within each parent class, are self explanatory- as we move on with the HTML.
+    # Feel free to share your thoughts and suggestions towards this website, to the following mail ID:
+    #    Email : harirmdeee@gmail.com ;  
+    #    Name  : HariEshwar J A;
+-->
 
 <body class="container">
     <div class="box">
-        <div class="box1">
-            <div class="box11">
-                <div class="box111">
-                    <div class="child1"><img src="images/newdelhi.svg" alt="NewDelhi" height="120px"></div>
-                    <form class="child2">
+        <div class="top-box">
+            <div class="current-info">
+                <div class="upper-part">
+                    <div class="city-img"><img src="images/newdelhi.svg" alt="NewDelhi" height="120px"></div>
+                    <form class="city-list">
                         <select name="cities" id="cities">
-                          <option value="newdelhi">New Delhi</option>
+                          <option value="newdelhi">NewDelhi</option>
                           <option value="kolkata">Kolkata</option>
                           <option value="dublin">Dublin</option>
                           <option value="perth">Perth</option>
+                          <option value="nome">Nome</option>
+                          <option value="newyork">NewYork</option>
+                          <option value="jamaica">Jamaica</option>
+                          <option value="losangeles">LosAngeles</option>
+                          <option value="winnipeg">Winnipeg</option>
+                          <option value="juba">Juba</option>
+                          <option value="maseru">Maseru</option>
+                          <option value="london">London</option>
+                          <option value="vienna">Vienna</option>
+                          <option value="moscow">Moscow</option>
+                          <option value="karachi">Karachi</option>
+                          <option value="yangon">Yangon</option>
+                          <option value="bangkok">BangKok</option>
+                          <option value="seoul">Seoul</option>
+                          <option value="anadyr">Anadyr</option>
+                          <option value="brokenhil">BrokenHill</option>
+                          <option value="auckland">Auckland</option>
+                          <option value="vostok">Vostok</option>
+                          <option value="troll">Troll</option>
                         </select>
                     </form>
-                    <p class="child3">Temp <sup>&#8728</sup>C <br><br><b>25 C</b></p>
-                    <p class="child4">Humidity<br><br><b>26</b>&nbsp &nbsp%</p>
+                    <p class="temp-c">Temp <sup>&#8728</sup>C <br><br><b>25 C</b></p>
+                    <p class="humidity">Humidity<br><br><b>26</b>&nbsp &nbsp%</p>
                 </div>
-                <div class="box112">
-                    <div class="child0"></div>
-                    <p class="child1">
+                <div class="lower-part">
+                    <div class="blank"></div>
+                    <p class="date-time">
                         <b>10:10:44 </b><img src="images/amState.svg" height="60px"><br>01-Mar-2020</p>
-                    <p class="child2">Temp F<br><br><b>75 F</b></p>
-                    <p class="child3">Precipitation<br><br><b>0</b>&nbsp &nbsp &nbsp%</p>
+                    <p class="temp-f">Temp F<br><br><b>75 F</b></p>
+                    <p class="precipitation">Precipitation<br><br><b>0</b>&nbsp &nbsp &nbsp%</p>
                 </div>
             </div>
-            <div class="box12">
-                <div class="box121">
-                    <div class="box1211">
+            <div class="timeline">
+                <div class="wrapper-box">
+                    <div class="time">
                         <p>NOW</p>
                         <p>11 AM</p>
                         <p>12 PM</p>
@@ -44,9 +75,8 @@
                         <p>2 PM</p>
                         <p>3 PM</p>
                     </div>
-                    <div class="box1212">
+                    <div class="vertical-line">
                         <div class="vl"></div>
-                        <!--style="visibility: hidden;">I</div-->
                         <div class="vl">I</div>
                         <div class="vl">I</div>
                         <div class="vl">I</div>
@@ -59,7 +89,7 @@
                         <div class="vl">I</div>
                         <div class="vl">I</div>
                     </div>
-                    <div class="box1213">
+                    <div class="icons">
                         <img src="icons/cloudyIcon.svg" height="20px">
                         <img src="icons/rainyIcon.svg" height="25px">
                         <img src="icons/windyIcon.svg" height="20px">
@@ -67,7 +97,7 @@
                         <img src="icons/windyIcon.svg" height="20px">
                         <img src="icons/rainyIcon.svg" height="25px">
                     </div>
-                    <div class="box1214">
+                    <div class="temperature">
                         <p>6</p>
                         <p>7</p>
                         <p>7</p>
@@ -78,9 +108,9 @@
                 </div>
             </div>
         </div>
-        <div class="box2">
-            <div class="box21">
-                <div class="box211">
+        <div class="tail-box">
+            <div class="city-cards">
+                <div class="header">
                     <p>Top Cities around world</p>
                     <img src="images/sunnyIcon.svg" width="25px">
                     <img src="images/snowflakeIcon.svg" width="25px">
@@ -88,8 +118,8 @@
                     <label for="disp_el">Display Top</label>
                     <input type="number" step="1" min="3" max="10" value="7">
                 </div>
-                <div class="box212">
-                    <div class="child1">
+                <div class="card-box">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -101,7 +131,7 @@
                             <p>&nbsp25<sup>&#8728</sup>C</p>
                         </div>
                     </div>
-                    <div class="child1">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -113,7 +143,7 @@
                             <p>&nbsp25<sup>&#8728</sup>C</p>
                         </div>
                     </div>
-                    <div class="child1">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -125,7 +155,7 @@
                             <p>&nbsp25<sup>&#8728</sup>C</p>
                         </div>
                     </div>
-                    <div class="child1">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -137,7 +167,7 @@
                             <p>&nbsp25<sup>&#8728</sup>C</p>
                         </div>
                     </div>
-                    <div class="child1">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -149,7 +179,7 @@
                             <p>&nbsp25<sup>&#8728</sup>C</p>
                         </div>
                     </div>
-                    <div class="child1">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -161,7 +191,7 @@
                             <p>&nbsp25<sup>&#8728</sup>C</p>
                         </div>
                     </div>
-                    <div class="child1">
+                    <div class="card">
                         <div>
                             <p class="cname" style="color: #fff;">New Delhi</p>
                             <p class="time" style="color: #fff;">10:00 AM</p>
@@ -175,82 +205,82 @@
                     </div>
                 </div>
             </div>
-            <div class="box22">
-                <div class="box221">
+            <div class="continents-cities-cards">
+                <div class="header">
                     <div class="title">Cities across continents at a Glance</div>
                     <div class="key1">Continent Name</div>
                     <div class="icon"><img src="images/arrowDown.svg" width="20px"></div>
                     <div class="key2">Temperature</div>
                     <div class="icon"><img src="images/arrowUp.svg" width="20px"></div>
                 </div>
-                <div class="box222">
-                    <div class="child">
+                <div class="cont-card-box">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Africa</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Egypt, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Europe</div>
                         <div class="temp">26<sup>&#8728</sup>C</div>
                         <div class="info">London, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">37<sup>&#8728</sup>C</div>
                         <div class="info">Chennai, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Africa</div>
                         <div class="temp">32<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>
                         <div class="humid"><img src="images/humidityIcon.svg">53%</div>
                     </div>
-                    <div class="child">
+                    <div class="cont-card">
                         <div class="cont">Asia</div>
                         <div class="temp">38<sup>&#8728</sup>C</div>
                         <div class="info">Delhi, 10:10 AM</div>

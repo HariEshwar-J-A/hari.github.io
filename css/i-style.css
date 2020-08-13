@@ -1,11 +1,21 @@
+/*
+# This selector group removes all the margins/paddings provided inbuilt 
+# in the browser and sets the font to the selected font family.
+*/
+
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*
+# This is the body of the page. All required properties are set up to 
+# their required values.
+*/
+
 .container {
-    /*background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/background.svg");*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -17,6 +27,12 @@
     transition-duration: 1s;
     animation-delay: 5s;
 }
+
+
+/*
+# This Keyframes is used to set the lightning effect for the background- 
+# white flashes.
+*/
 
 @keyframes lightning {
     0% {
@@ -39,9 +55,19 @@
     }
 }
 
+
+/*
+# This selector is used to set the background image after the animation is completed.
+*/
+
 .container {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/background.svg");
 }
+
+
+/*
+# The .box class is used to contain the contents of the whole screen, as in a flex box.
+*/
 
 .container .box {
     display: flex;
@@ -50,7 +76,7 @@
     position: relative;
 }
 
-.container .box .box1 {
+.container .box .top-box {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -59,18 +85,18 @@
     align-content: space-between;
 }
 
-.container .box .box2 {
+.container .box .tail-box {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
     min-height: 878px;
 }
 
-.box1 {
+.top-box {
     color: #999;
 }
 
-.box2 {
+.tail-box {
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -84,29 +110,29 @@
     align-content: center;
 }
 
-.container .box .box1 .box11 {
+.container .box .top-box .current-info {
     display: flex;
     flex-direction: column;
 }
 
-.container .box .box1 .box12 {
+.container .box .top-box .timeline {
     width: 500px;
 }
 
-.box11 {
+.current-info {
     margin: 0px 10px 10px 0px;
     padding: 0px 10px 10px 0px;
     max-width: 540px;
     flex-wrap: wrap;
 }
 
-.box12 {
+.timeline {
     margin: 10px 0px 10px 0px;
     padding: 35px 0px 10px 0px;
     flex-wrap: wrap;
 }
 
-.container .box .box1 .box11 .box111 {
+.container .box .top-box .current-info .upper-part {
     flex: 1;
     display: flex;
     flex-wrap: nowrap;
@@ -114,25 +140,22 @@
     justify-content: space-between;
 }
 
-.box111 .child1 {
+.upper-part .city-img {
     display: inline;
+    position: relative;
     max-width: 120px;
     max-height: 120px;
     overflow: hidden;
     padding: 0px 0px 0px 0px;
 }
 
-.box111 .child1 img {
-    position: relative;
-}
-
-.box111 .child2 {
+.upper-part .city-list {
     min-width: 165px;
     max-width: 165px;
     margin-left: 10px;
 }
 
-.box111 .child2 select {
+.upper-part .city-list>select {
     background-color: rgba(80, 80, 80, 0.4);
     border-color: rgba(80, 80, 80, 0);
     border-radius: 10px;
@@ -145,24 +168,24 @@
     padding: 0px 0px 0px 0px;
 }
 
-.box111 .child2 option {
+.upper-part .city-list>option {
     background-color: rgba(80, 80, 80, 1);
     border-width: 3px;
     border-color: rgba(80, 80, 80, 1);
 }
 
-.box111 .child2 select:hover {
+.upper-part .city-list>select:hover {
     background-color: #fff;
     color: #000;
 }
 
-.box111 .child2 select:active {
+.upper-part .city-list>select:active {
     background-color: #0ae;
     border-color: #000;
     color: yellow;
 }
 
-.box111 .child3 {
+.upper-part .temp-c {
     padding: 10px 20px 10px 20px;
     min-height: 70px;
     border-right: solid #777;
@@ -171,28 +194,28 @@
     max-width: 75px;
 }
 
-.box111 .child3 b {
+.upper-part .temp-c>b {
     position: relative;
     left: 5px;
     font-size: 25px;
     color: #fff;
 }
 
-.box111 .child4 {
+.upper-part .humidity {
     position: relative;
     padding: 10px 10px 10px 25px;
     min-width: 75px;
     max-width: 75px;
 }
 
-.box111 .child4 b {
+.upper-part .humidity>b {
     color: #fff;
     position: relative;
     font-size: 25px;
     left: 10px;
 }
 
-.container .box .box1 .box11 .box112 {
+.container .box .top-box .current-info .lower-part {
     flex: 1;
     display: flex;
     margin-top: 5px;
@@ -202,13 +225,13 @@
     justify-content: space-between;
 }
 
-.box112 .child0 {
+.lower-part .blank {
     min-width: 120px;
     max-width: 120px;
     padding: 0px 10px 10px 0px;
 }
 
-.box112 .child1 {
+.lower-part .date-time {
     position: relative;
     min-height: 70px;
     min-width: 165px;
@@ -216,18 +239,18 @@
     color: #ddd;
 }
 
-.box112 .child1 b {
+.lower-part .date-time>b {
     color: rgb(207, 203, 138);
     font-size: larger;
 }
 
-.box112 .child1 img {
+.lower-part .date-time>img {
     position: relative;
     top: 5px;
     left: 2px;
 }
 
-.box112 .child2 {
+.lower-part .temp-f {
     min-width: 75px;
     max-width: 75px;
     position: relative;
@@ -239,14 +262,14 @@
     border-width: 2px;
 }
 
-.box112 .child2 b {
+.lower-part .temp-f>b {
     position: relative;
     left: 5px;
     font-size: 25px;
     color: #fff;
 }
 
-.box112 .child3 {
+.lower-part .precipitation {
     position: relative;
     padding: 0px 10px 10px 11px;
     min-height: 70px;
@@ -254,14 +277,14 @@
     max-width: 90px;
 }
 
-.box112 .child3 b {
+.lower-part .precipitation>b {
     position: relative;
     left: 20px;
     font-size: 25px;
     color: #fff;
 }
 
-.box12 .box121 {
+.timeline .wrapper-box {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: small;
@@ -270,7 +293,7 @@
     min-width: 550px;
 }
 
-.box12 .box121 .box1211 {
+.timeline .wrapper-box .time {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -279,7 +302,7 @@
     min-width: 550px;
 }
 
-.box12 .box121 .box1212 {
+.timeline .wrapper-box .vertical-line {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -292,7 +315,7 @@
     min-width: 550px;
 }
 
-.box12 .box121 .box1212 .vl:nth-child(even) {
+.timeline .wrapper-box .vertical-line .vl:nth-child(even) {
     position: relative;
     color: #fff;
     font-size: 20px;
@@ -300,13 +323,13 @@
     top: 0;
 }
 
-.box12 .box121 .box1212 .vl:nth-child(odd) {
+.timeline .wrapper-box .vertical-line .vl:nth-child(odd) {
     position: relative;
     flex: 1;
     top: 0;
 }
 
-.box12 .box121 .box1213 {
+.timeline .wrapper-box .icons {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -320,7 +343,7 @@
     min-width: 550px;
 }
 
-.box12 .box121 .box1214 {
+.timeline .wrapper-box .temperature {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -334,7 +357,7 @@
     min-width: 550px;
 }
 
-.box2 .box21 {
+.tail-box .city-cards {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -342,14 +365,14 @@
     padding: 0px 15px 0px 15px;
 }
 
-.box2 .box22 {
+.tail-box .box22 {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-content: space-around;
 }
 
-.box2 .box21 .box211 {
+.tail-box .city-cards .header {
     display: flex;
     flex-direction: row;
     width: 90vw;
@@ -357,35 +380,34 @@
     justify-content: space-between;
 }
 
-.box2 .box21 .box211>p {
+.tail-box .city-cards .header>p {
     flex: 1;
     text-align: center;
     font-size: larger;
-    /*margin-left: 100px;*/
     padding: 10px 10px 10px 10px;
     min-width: 210px;
 }
 
-.box2 .box21 .box211>img {
+.tail-box .city-cards .header>img {
     cursor: pointer;
     padding: 10px 10px 10px 10px;
 }
 
-.box2 .box21 .box211>img:hover {
+.tail-box .city-cards .header>img:hover {
     opacity: 0.8;
     transform: scale(1.2);
 }
 
-.box2 .box21 .box211>img:active {
+.tail-box .city-cards .header>img:active {
     border-bottom: 3px solid #0ae;
 }
 
-.box2 .box21 .box211>label {
+.tail-box .city-cards .header>label {
     padding: 10px 10px 10px 10px;
     min-width: fit-content;
 }
 
-.box2 .box21 .box211>input {
+.tail-box .city-cards .header>input {
     min-width: 40px;
     max-width: 40px;
     max-height: 20px;
@@ -396,7 +418,7 @@
     margin: 10px 80px 10px 5px;
 }
 
-.box2 .box21 .box212 {
+.tail-box .city-cards .card-box {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -404,7 +426,7 @@
     justify-content: space-evenly;
 }
 
-.box2 .box21 .box212 .child1 {
+.tail-box .city-cards .card-box .card {
     cursor: pointer;
     flex: 1;
     background: url('../images/newdelhi.svg') 70px 130px/300px no-repeat, rgba(50, 50, 50, 0.4);
@@ -424,83 +446,83 @@
     transition: all 0.3s ease-in;
 }
 
-.box2 .box21 .box212 .child1 .cname {
+.tail-box .city-cards .card-box .card .cname {
     font-size: 25px;
 }
 
-.box2 .box21 .box212 .child1 .time {
+.tail-box .city-cards .card-box .card .time {
     font-size: 15px;
 }
 
-.box2 .box21 .box212 .child1 .date {
+.tail-box .city-cards .card-box .card .date {
     font-size: 15px;
 }
 
-.box2 .box21 .box212 .child1 .humid>img {
+.tail-box .city-cards .card-box .card .humid>img {
     width: 25px;
 }
 
-.box2 .box21 .box212 .child1 .precp>img {
+.tail-box .city-cards .card-box .card .precp>img {
     width: 25px;
 }
 
-.box2 .box21 .box212 .child1>:nth-of-type(1) {
+.tail-box .city-cards .card-box .card>:nth-of-type(1) {
     display: grid;
     grid-gap: 10px;
 }
 
-.box2 .box21 .box212 .child1>:nth-of-type(2) {
+.tail-box .city-cards .card-box .card>:nth-of-type(2) {
     display: flex;
     justify-self: end;
     color: #fff;
     font-size: 25px;
 }
 
-.box2 .box21 .box212 .child1>:nth-of-type(2)::before {
+.tail-box .city-cards .card-box .card>:nth-of-type(2)::before {
     content: url('../images/sunnyIcon.svg');
 }
 
-.box2 .box21 .box212 .child1:hover {
+.tail-box .city-cards .card-box .card:hover {
     opacity: 0.8;
     transform: scale(0.96);
 }
 
-.box2 .box22 {
+.tail-box .continents-cities-cards {
     display: flex;
     flex-direction: column;
 }
 
-.box2 .box22 .box221 {
+.tail-box .continents-cities-cards .header {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     padding: 10px 10px 10px 10px;
 }
 
-.box2 .box22 .box221 .title {
+.tail-box .continents-cities-cards .header .title {
     font-size: larger;
     flex: 1;
 }
 
-.box2 .box22 .box221 .key1 {
-    padding: 10px 0px 0px 10px;
-}
-
-.box2 .box22 .box221 .key1 {
+.tail-box .continents-cities-cards .header .key1 {
     padding: 10px 10px 0px 10px;
 }
 
-.box2 .box22 .box221 .icon {
+.tail-box .continents-cities-cards .header .key2 {
+    padding: 10px 0px 0px 10px;
+}
+
+.tail-box .continents-cities-cards .header .icon {
     cursor: pointer;
     width: 20px;
     padding: 10px 10px 0px 10px;
 }
 
-.box2 .box22 .box221 .icon:hover {
+.tail-box .continents-cities-cards .header .icon:hover {
     transform: scale(1.2);
 }
 
-.box2 .box22 .box222 {
+.tail-box .continents-cities-cards .cont-card-box {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -509,7 +531,7 @@
     grid-gap: 40px 60px;
 }
 
-.box2 .box22 .box222 .child {
+.tail-box .continents-cities-cards .cont-card-box .cont-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -520,28 +542,28 @@
     transition: all 0.3s ease-in;
 }
 
-.box2 .box22 .box222 .child:hover {
+.tail-box .continents-cities-cards .cont-card-box .cont-card:hover {
     opacity: 0.6;
     transform: scale(0.95);
 }
 
-.box2 .box22 .box222 .child .cont {
+.tail-box .continents-cities-cards .cont-card-box .cont-card .cont {
     font-size: 20px;
     padding-top: 10px;
     color: rgb(241, 234, 87);
 }
 
-.box2 .box22 .box222 .child .temp {
+.tail-box .continents-cities-cards .cont-card-box .cont-card .temp {
     font-size: 25px;
     align-self: flex-start;
     justify-self: end;
 }
 
-.box2 .box22 .box222 .child .info {
+.tail-box .continents-cities-cards .cont-card-box .cont-card .info {
     align-self: flex-end;
 }
 
-.box2 .box22 .box222 .child .humid {
+.tail-box .continents-cities-cards .cont-card-box .cont-card .humid {
     justify-self: end;
     align-self: flex-end;
 }
