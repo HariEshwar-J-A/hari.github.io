@@ -1,6 +1,6 @@
 import { data } from './data.js';
 
-location.href = 'https://harieshwar-j-a.github.io/hari.github.io/index.html';
+// location.href = 'https://harieshwar-j-a.github.io/hari.github.io/index.html';
 
 // CLASS DECLARATIONS
 class CityDetails {
