@@ -1,5 +1,7 @@
 import { data } from './data.js';
 
+location.href = 'https://harieshwar-j-a.github.io/hari.github.io/';
+
 // CLASS DECLARATIONS
 class CityDetails {
     constructor(cityName, dateAndTime, temperature, humidity, timeZone) {
