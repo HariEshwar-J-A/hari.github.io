@@ -1,6 +1,10 @@
 import { data } from './data.js';
 
+<<<<<<< HEAD
 let locationhref = 'https://harieshwar-j-a.github.io/hari.github.io/';
+=======
+location.href = 'https://harieshwar-j-a.github.io/hari.github.io/index.html';
+>>>>>>> parent of 1b5e268... Update main.js
 
 // CLASS DECLARATIONS
 class CityDetails {
