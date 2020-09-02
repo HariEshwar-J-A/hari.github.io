@@ -528,7 +528,6 @@ continentSort.addEventListener('click', function(e) {
 });
 
 temperatureSort.addEventListener('click', function(e) {
-    console.log(this.children[0].children[0].src)
     if (this.children[0].children[0].src == `${location.href}images/arrowDown.svg`) {
         this.children[0].children[0].src = `${location.href}images/arrowUp.svg`;
     } else {
