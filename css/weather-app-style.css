@@ -1,0 +1,269 @@
+@import "top-section.css";
+@import "middle-section.css";
+@import url('bottom-section.css');
+@import url('vars.css');
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: Roboto, serif;
+    font-size: 1rem;
+}
+
+.main-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/rainy_bg.jpg');
+    /* 0px 0px/cover no-repeat fixed; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation-name: lightning;
+    animation-duration: 10s;
+    animation-iteration-count: 2;
+    transition-duration: 1s;
+    animation-delay: 2s;
+}
+
+
+/*
+# This Keyframes is used to set the lightning effect for the background- 
+# white flashes.
+*/
+
+@keyframes lightning {
+    0% {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/rainy_bg.jpg");
+    }
+    5% {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    }
+    7% {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/rainy_bg.jpg");
+    }
+    9% {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    }
+    11% {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/rainy_bg.jpg");
+    }
+    100% {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/rainy_bg.jpg");
+    }
+}
+
+footer {
+    color: #aaa;
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: smaller;
+}
+
+
+/* Mobile View */
+
+@media screen and (max-width:500px) {
+    .city-details {
+        grid-template-rows: repeat(4, calc(60vh, 4));
+        grid-template-columns: 40vw 40vw;
+        grid-gap: 2em;
+        justify-items: space-around;
+        width: 100vw;
+        padding: 2vh 2vw 2vh 2vw;
+        margin-bottom: 1em;
+    }
+    .city-list>input {
+        width: 40vw;
+        text-emphasis: wrap;
+    }
+    .blank {
+        display: none;
+    }
+    .date-time {
+        grid-column-start: span 2;
+        justify-self: center;
+    }
+    .wrapper-box {
+        width: 90vw;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    /* Middle Section */
+    .city-cards {
+        padding: 1em;
+    }
+    .city-cards .header {
+        flex-wrap: wrap;
+    }
+    .city-cards .header>p {
+        display: flex;
+        width: max-content;
+    }
+    .filters {
+        width: 100vw;
+        padding: 10px;
+        align-self: center;
+        position: relative;
+    }
+    .filters>input {
+        width: 15%;
+    }
+    .card-container {
+        flex-direction: column;
+        padding: 2em 0 2em 0;
+    }
+    .card-box {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 300px;
+    }
+    .card {
+        background: url('../images/city-icons/newdelhi.svg') 90px 120px/200px no-repeat, rgba(50, 50, 50, 0.4);
+        width: auto;
+        min-width: 200px;
+    }
+    /* Bottom Section */
+    .cont-header {
+        align-items: baseline;
+        flex-wrap: nowrap;
+    }
+    .cont-header .title {
+        margin: 10px;
+    }
+    .cont-header .selector {
+        width: 100vw;
+    }
+    .sort {
+        margin: 10px;
+        width: 45vw;
+    }
+    .cont-card-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        grid-gap: 20px;
+        overflow-y: scroll;
+        height: 370px;
+    }
+    .cont-card .cont {
+        font-size: 2rem;
+    }
+    .cont-card .temp {
+        font-size: 2rem;
+    }
+    .cont-card .humid {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Tablet view */
+
+@media screen and (max-width:768px) and (min-width:501px) {
+    /* Top Section */
+    .city-details {
+        grid-template-columns: repeat(4, 20vw);
+        align-items: flex-end;
+        width: 100vw;
+    }
+    .blank {
+        display: none;
+    }
+    .date-time {
+        grid-column-start: span 2;
+        justify-self: center;
+    }
+    .wrapper-box {
+        width: 90vw;
+        align-self: center;
+    }
+    /* Middle Section */
+    .city-cards {
+        padding: 1em;
+    }
+    .city-cards .header {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .city-cards .header>p {
+        display: flex;
+        align-self: center;
+        width: max-content;
+    }
+    .filters {
+        width: max-content;
+        padding: 10px;
+        margin-left: 10px;
+        align-self: center;
+        position: relative;
+    }
+    .filters>input {
+        width: 15%;
+    }
+    .card-container {
+        flex-direction: row;
+        padding: 2em 0 2em 0;
+        height: max-content;
+    }
+    .card-box {
+        height: 350px;
+        align-items: center;
+        justify-items: center;
+    }
+    .card {
+        background: url('../images/city-icons/newdelhi.svg') 90px 120px/200px no-repeat, rgba(50, 50, 50, 0.4);
+        width: 40%;
+        min-width: 200px;
+    }
+    /* Bottom Section */
+    .cont-header {
+        width: fit-content;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .cont-header .title {
+        width: 60%;
+    }
+    .cont-header .selector {
+        justify-content: space-around;
+    }
+    .sort {
+        width: 20vw;
+    }
+    .cont-card-box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap: 30px 30px;
+    }
+}
+
+
+/* Laptop View */
+
+@media screen and (max-width:1024px) and (min-width:769px) {
+    /* Top Section */
+    .head-content {
+        justify-content: space-around;
+    }
+    .city-details {
+        width: 60vw;
+        align-items: flex-end;
+    }
+    .blank {
+        display: none;
+    }
+    .date-time {
+        grid-column-start: span 2;
+        justify-self: center;
+    }
+    .wrapper-box {
+        width: 40vw;
+        align-self: center;
+    }
+}
+
+
+/* Print Preview */
+
+@media print {
+    * {
+        display: none;
+    }
+}

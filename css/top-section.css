@@ -1,0 +1,133 @@
+.head-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.city-details {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, calc(55vw/4));
+    grid-gap: 0px 20px;
+    align-items: center;
+    color: #ccc;
+    width: 55vw;
+}
+
+.city-details>* {
+    align-self: center;
+}
+
+.city-details b {
+    color: #fff;
+    font-size: x-large;
+}
+
+.city-img>img {
+    width: 120px;
+    height: 120px;
+}
+
+.city-list>label {
+    display: none;
+}
+
+.city-list>input {
+    background-color: rgba(80, 80, 80, 0.4);
+    border: 0.1rem solid rgba(80, 80, 80, 0);
+    border-radius: 0.3rem;
+    color: #eee;
+    text-align: center;
+    height: 10vh;
+    width: min(25vw, 120px);
+    font-size: 1rem;
+}
+
+.city-list>input:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.city-list>option {
+    background-color: rgba(80, 80, 80, 1);
+    border-radius: 0.3rem;
+}
+
+.blank {
+    width: 120px;
+    height: 120px;
+}
+
+.date-time {
+    width: 155px;
+}
+
+.date-time>b {
+    color: var(--pale-yellow-text);
+}
+
+.date-time>img {
+    width: 50px;
+}
+
+.temp-f,
+.temp-c {
+    border-right: solid #777;
+    border-width: 0.2rem;
+}
+
+.wrapper-box {
+    width: 40vw;
+    color: #fff;
+}
+
+.time-list,
+.vertical-line,
+.icons,
+.temperature {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 5px 5px 5px;
+}
+
+
+/* .vertical-line {
+    padding-left: calc(100%/12);
+}
+
+.vertical-line>div:nth-of-type(odd) {
+    border-left: 3px solid #555;
+    border-right: 3px solid #555;
+    width: calc(100%/6);
+    justify-content: space-around;
+    height: 20px;
+} */
+
+.icons>img {
+    height: 25px;
+}
+
+.vertical-line {
+    color: #555;
+}
+
+.vertical-line {
+    padding-left: 2em;
+    padding-right: 2em;
+    justify-self: center;
+}
+
+.vertical-line>div:nth-of-type(even) {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.vertical-line>div {
+    box-sizing: content-box;
+    align-self: center;
+    color: #000;
+    font-size: 2rem;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}

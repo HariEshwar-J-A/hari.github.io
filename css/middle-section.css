@@ -1,0 +1,130 @@
+.common-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #aaa;
+    border-radius: 2em 2em 0 0;
+}
+
+.city-cards {
+    padding: 2em;
+}
+
+.city-cards .header {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.filters {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: auto;
+    right: 5%;
+    width: 30vw;
+}
+
+.filters>div:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.active-icon {
+    border-bottom: 0.3rem solid var(--bg-selection-blue);
+}
+
+.filters>input {
+    border: none;
+    text-align: center;
+    width: 5vw;
+    height: 30px;
+    color: #fff;
+    background-color: rgba(50, 50, 50, 0.4);
+}
+
+.filters input[type="number"]::-webkit-outer-spin-button,
+.filters input[type="number"]::-webkit-inner-spin-button {
+    border: none;
+    opacity: 0.4;
+}
+
+.filters input[type="number"]::-webkit-inner-spin-button:hover,
+.filters input[type="number"]::-webkit-inner-spin-button:active {
+    box-shadow: 0 0 12px rgb(255, 230, 0);
+    opacity: 0.8;
+}
+
+.card-container {
+    display: flex;
+    padding: 2em;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#frontarrow,
+#backarrow {
+    width: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+#frontarrow:hover,
+#backarrow:hover {
+    transform: scale(1.1);
+}
+
+.card-box {
+    margin: 1.5rem 0 1.5rem 0;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+    width: 80%;
+}
+
+.card-box::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    cursor: pointer;
+    background: url('../images/city-icons/newdelhi.svg') 70px 130px/300px no-repeat, var(--bg-dark-grey-tile);
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin: 1rem;
+    line-height: 2.5rem;
+    opacity: 0.9;
+}
+
+.card:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.card b {
+    color: #fff;
+    font-size: large;
+}
+
+.card .cname {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cname :nth-child(2) {
+    font-size: x-large;
+    color: #fff;
+}
+
+.cname :nth-child(2)::before {
+    content: url('../images/sunnyIcon.svg');
+    position: relative;
+    top: 10px;
+}
