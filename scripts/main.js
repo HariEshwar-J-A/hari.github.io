@@ -374,7 +374,7 @@ function updateContinentCards() {
         contCardBox.innerHTML += contArray[i].getHTML();
     }
     setEventListenersContinentCards();
-}
+};
 
 /**
  *
@@ -386,11 +386,11 @@ function scrollArrowsAppear() {
         document.getElementById('frontarrow').remove();
     }
     cityCardContainer.innerHTML = `<div id="backarrow"><img src=${locationhref}/images/backwardArrow.svg" alt='backArrow'></div>` +
-        cityCardContainer.innerHTML + `<div id="frontarrow"><img src="${locationhref}//images/forwardArrow.svg" alt='forwardArrow'></div>`;
+        cityCardContainer.innerHTML + `<div id="frontarrow"><img src="${locationhref}/images/forwardArrow.svg" alt='forwardArrow'></div>`;
     //console.log("New Arrow Appears!")
     document.getElementById('frontarrow').addEventListener('click', (e) => document.getElementsByClassName('card-box')[0].scrollBy(300, 0));
     document.getElementById('backarrow').addEventListener('click', (e) => document.getElementsByClassName('card-box')[0].scrollBy(-300, 0));
-}
+};
 
 /**
  *
@@ -402,7 +402,7 @@ function scrollArrowsDisappear() {
         document.getElementById('frontarrow').remove();
     }
     //console.log("Old Arrow Disappears!")
-}
+};
 
 /**
  *
@@ -416,7 +416,7 @@ function setEventListenersCityCards() {
             citySelection(document.getElementById('city').value);
         });
     }
-}
+};
 
 /**
  *
@@ -450,14 +450,14 @@ function updateTime() {
     headDateAndTime[0].innerText = `${currentTime} `;
     headDateAndTime[1].src = `images/${amOrPm}State.svg`;
     headDateAndTime[3].innerText = parseDate(currentDate, monthStrings);
-}
+};
 
 /**
  *
  */
 function timer() {
     updateTime();
-}
+};
 // Add set attributes for on click!
 
 // EVENT DECLARATIONS
@@ -469,7 +469,7 @@ window.addEventListener('resize', function(e) {
         scrollArrowsDisappear();
     }
     cardStatsChange(displayTop.value);
-})
+});
 
 sunnyIcon.addEventListener('click', function(event) {
     this.className = 'active-icon';
@@ -483,24 +483,37 @@ rainyIcon.addEventListener('click', function(event) {
     snowyIcon.className = '';
     sunnyIcon.className = '';
     cardStatsChange(displayTop.value);
-})
+});
 
 snowyIcon.addEventListener('click', function(event) {
     this.className = 'active-icon';
     sunnyIcon.className = '';
     rainyIcon.className = '';
     cardStatsChange(displayTop.value);
-})
+});
 
 displayTop.addEventListener('input', function(e) {
-    if (this.value < 3) { this.value = 3 };
-    if (this.value > 10) { this.value = 10 };
-    cardStatsChange(this.value);
-})
+    let x = this.value;
+    x = x < 3 ? 3 : x;
+    x = x > 10 ? 10 : x;
+    cardStatsChange(x);
+});
+
+displayTop.onblur = (() => {
+    if (displayTop.value < 3) { displayTop.value = 3 };
+    if (displayTop.value > 10) { displayTop.value = 10 };
+});
 
 frontArrow.addEventListener('click', (e) => cardBox.scrollBy(400, 0));
 
 backArrow.addEventListener('click', (e) => cardBox.scrollBy(-400, 0));
+
+headCity.onfocus = (() => headCity.value = '');
+
+headCity.onblur = (() => {
+    headCity.value = data.hasOwnProperty(headCity.value.toLowerCase()) ? headCity.value : 'NewDelhi';
+    citySelection(headCity.value);
+});
 
 headCity.addEventListener('input', function() {
     let cityName = this.value;
