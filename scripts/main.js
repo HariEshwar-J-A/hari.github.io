@@ -54,7 +54,7 @@ class CityDetails {
         <div class="cont">${this.getContinentName()}</div>
         <div class="temp">${this.temperature}</div>
         <div class="info">${this.cityName}, ${this.getHoursMinutes()} ${this.meridiem}</div> 
-        <div class="humid"><img src="${locationhref}/images/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
+        <div class="humid"><img src="${location.href}/images/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
         </div>`;
     }
 }
@@ -73,13 +73,13 @@ class CityCardDetails extends CityDetails {
         </div>
         <div class="time"><b>${this.getHoursMinutes()} ${this.meridiem}</b></div>
         <div class="date"><b>${this.getRequiredDateFormat()}</b></div>
-        <div class="humid"><img src="${locationhref}/images/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
-        <div class="precp"><img src="${locationhref}/images/precipitationIcon.svg" alt="precipitationIcon">${this.precipitation}</div>
+        <div class="humid"><img src="${location.href}/images/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
+        <div class="precp"><img src="${location.href}/images/precipitationIcon.svg" alt="precipitationIcon">${this.precipitation}</div>
     </div>`
     }
 
     getBG() {
-        return `url('${locationhref}/images/city-icons/${this.cityName.toLowerCase()}.svg') 80px 100px/250px no-repeat, rgba(50, 50, 50, 0.5)`;
+        return `url('${location.href}/images/city-icons/${this.cityName.toLowerCase()}.svg') 80px 100px/250px no-repeat, rgba(50, 50, 50, 0.5)`;
     }
 }
 
@@ -94,7 +94,7 @@ class CitySelectionDetails extends CityCardDetails {
     }
 
     getImageHTML() {
-        return `<img src="${locationhref}/images/city-icons/${this.cityName.toLowerCase()}.svg" alt="${this.cityName}">`;
+        return `<img src="${location.href}/images/city-icons/${this.cityName.toLowerCase()}.svg" alt="${this.cityName}">`;
     }
 
     getCelciusHTML() {
@@ -106,7 +106,7 @@ class CitySelectionDetails extends CityCardDetails {
     }
 
     getDateAndTimeHTML() {
-        return `<b>${this.time} </b><img src="${locationhref}/images/${this.meridiem.toLowerCase()}State.svg" alt='AM'><br><span>${super.getRequiredDateFormat()}</span>`;
+        return `<b>${this.time} </b><img src="${location.href}/images/${this.meridiem.toLowerCase()}State.svg" alt='AM'><br><span>${super.getRequiredDateFormat()}</span>`;
     }
 
     getFarenheitHTML() {
@@ -154,11 +154,11 @@ class CitySelectionDetails extends CityCardDetails {
 
     setTimelineHTML(headTimeArray, headIconArray, headTempArray) {
         headTimeArray.innerHTML = `<p id='time1'>NOW</p>`
-        headIconArray.innerHTML = `<img id="image1" src="${locationhref}/icons/${this.iconArray[0]}Icon.svg" alt="icon">`;
+        headIconArray.innerHTML = `<img id="image1" src="${location.href}/icons/${this.iconArray[0]}Icon.svg" alt="icon">`;
         headTempArray.innerHTML = `<p id="temp1">${this.tempArray[0]}</p>`
         for (let i = 1; i < 6; i++) {
             headTimeArray.innerHTML += `<p id='time${i+1}'>${this.timeArray[i]} ${this.timeOfDay[i]}</p>`
-            headIconArray.innerHTML += `<img id="image${i+1}" src="${locationhref}/icons/${this.iconArray[i]}Icon.svg" alt="icon">`;
+            headIconArray.innerHTML += `<img id="image${i+1}" src="${location.href}/icons/${this.iconArray[i]}Icon.svg" alt="icon">`;
             headTempArray.innerHTML += `<p id="temp${i+1}">${this.tempArray[i]}</p>`
         }
     }
@@ -347,8 +347,8 @@ function updateContinentCards() {
     }
 
     // Store the boolean values for the type of sort to be made
-    let contSort = (document.getElementsByClassName('up-down-icon')[0].children[0].src == `${locationhref}/images/arrowDown.svg`);
-    let tempSort = (document.getElementsByClassName('up-down-icon')[1].children[0].src == `${locationhref}//images/arrowDown.svg`);
+    let contSort = (document.getElementsByClassName('up-down-icon')[0].children[0].src == `${location.href}/images/arrowDown.svg`);
+    let tempSort = (document.getElementsByClassName('up-down-icon')[1].children[0].src == `${location.href}//images/arrowDown.svg`);
     let contCardBox = document.getElementsByClassName('cont-card-box')[0];
 
     // Clear the Continent card's container
@@ -379,8 +379,8 @@ function scrollArrowsAppear() {
         document.getElementById('backarrow').remove();
         document.getElementById('frontarrow').remove();
     }
-    cityCardContainer.innerHTML = `<div id="backarrow"><img src=${locationhref}/images/backwardArrow.svg" alt='backArrow'></div>` +
-        cityCardContainer.innerHTML + `<div id="frontarrow"><img src="${locationhref}/images/forwardArrow.svg" alt='forwardArrow'></div>`;
+    cityCardContainer.innerHTML = `<div id="backarrow"><img src=${location.href}/images/backwardArrow.svg" alt='backArrow'></div>` +
+        cityCardContainer.innerHTML + `<div id="frontarrow"><img src="${location.href}/images/forwardArrow.svg" alt='forwardArrow'></div>`;
     //console.log("New Arrow Appears!")
     document.getElementById('frontarrow').addEventListener('click', (e) => document.getElementsByClassName('card-box')[0].scrollBy(300, 0));
     document.getElementById('backarrow').addEventListener('click', (e) => document.getElementsByClassName('card-box')[0].scrollBy(-300, 0));
@@ -518,19 +518,19 @@ headCity.addEventListener('input', function() {
 });
 
 continentSort.addEventListener('click', function(e) {
-    if (this.children[0].children[0].src == `${locationhref}/images/arrowDown.svg`) {
-        this.children[0].children[0].src = `${locationhref}/images/arrowUp.svg`;
+    if (this.children[0].children[0].src == `${location.href}/images/arrowDown.svg`) {
+        this.children[0].children[0].src = `${location.href}/images/arrowUp.svg`;
     } else {
-        this.children[0].children[0].src = `${locationhref}/images/arrowDown.svg`;
+        this.children[0].children[0].src = `${location.href}/images/arrowDown.svg`;
     }
     updateContinentCards();
 });
 
 temperatureSort.addEventListener('click', function(e) {
-    if (this.children[0].children[0].src == `${locationhref}/images/arrowDown.svg`) {
-        this.children[0].children[0].src = `${locationhref}/images/arrowUp.svg`;
+    if (this.children[0].children[0].src == `${location.href}/images/arrowDown.svg`) {
+        this.children[0].children[0].src = `${location.href}/images/arrowUp.svg`;
     } else {
-        this.children[0].children[0].src = `${locationhref}/images/arrowDown.svg`;
+        this.children[0].children[0].src = `${location.href}/images/arrowDown.svg`;
     }
     updateContinentCards();
 });
