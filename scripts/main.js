@@ -1,5 +1,5 @@
 import { data } from './data.js';
-
+//new changed js file
 // CLASS DECLARATIONS
 class CityDetails {
     constructor(cityName, dateAndTime, temperature, humidity, timeZone) {
