@@ -379,7 +379,7 @@ function scrollArrowsAppear() {
         document.getElementById('backarrow').remove();
         document.getElementById('frontarrow').remove();
     }
-    cityCardContainer.innerHTML = `<div id="backarrow"><img src=${location.href}/images/backwardArrow.svg" alt='backArrow'></div>` +
+    cityCardContainer.innerHTML = `<div id="backarrow"><img src="${location.href}/images/backwardArrow.svg" alt='backArrow'></div>` +
         cityCardContainer.innerHTML + `<div id="frontarrow"><img src="${location.href}/images/forwardArrow.svg" alt='forwardArrow'></div>`;
     //console.log("New Arrow Appears!")
     document.getElementById('frontarrow').addEventListener('click', (e) => document.getElementsByClassName('card-box')[0].scrollBy(300, 0));
