@@ -79,11 +79,7 @@ class CityCardDetails extends CityDetails {
     }
 
     getBG() {
-<<<<<<< HEAD
         return `url('${location.href}/images/city-icons/${this.cityName.toLowerCase()}.svg') 80px 100px/250px no-repeat, rgba(50, 50, 50, 0.5)`;
-=======
-        return `url(${location.href}+'/images/city-icons/${this.cityName.toLowerCase()}.svg') 80px 100px/250px no-repeat, rgba(50, 50, 50, 0.5)`;
->>>>>>> 706d7df430403b7ca165231bb1266c98a0545559
     }
 }
 
