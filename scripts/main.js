@@ -173,6 +173,17 @@ let loop = setInterval(timer, 1000);
 let monthStrings = { '1': "Jan", '2': "Feb", '3': "Mar", '4': "Apr", '5': "May", '6': "Jun", '7': "Jul", '8': "Aug", '9': "Sep", '10': "Oct", '11': "Nov", '12': "Dec" }
 
 //let currentCity = new CitySelectionDetails(data[document.getElementById('city').value.toLowerCase()]);
+//create xhr object
+let xhr = new XMLHttpRequest();
+// .open(type(string), url/file(string), async(bool))
+xhr.open('GET', 'http://api.weatherapi.com/v1/current.json?key=103a06b83b964ce4a2b210333200307&q=London', true);
+xhr.onload = function() {
+if (this.status == 200) {
+console.log(this.responseText);
+    }
+}
+//sends request
+xhr.send();
 
 let headCity = document.getElementById('city');
 // citySelection(headCity.value);
