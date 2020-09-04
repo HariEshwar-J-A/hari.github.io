@@ -176,7 +176,7 @@ let monthStrings = { '1': "Jan", '2': "Feb", '3': "Mar", '4': "Apr", '5': "May",
 //create xhr object
 let xhr = new XMLHttpRequest();
 // .open(type(string), url/file(string), async(bool))
-xhr.open('GET', 'https://api.weatherapi.com/v1/current.json?key=103a06b83b964ce4a2b210333200307&q=London', true);
+xhr.open('GET', 'https://soliton.glitch.me?city=London', true);
 xhr.onload = function() {
 if (this.status == 200) {
 console.log(this.responseText);
