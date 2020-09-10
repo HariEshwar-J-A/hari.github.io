@@ -1,3 +1,5 @@
+/* top-section */
+
 .head-content {
     display: flex;
     flex-direction: row;
@@ -91,19 +93,6 @@
     padding: 5px 5px 5px 5px;
 }
 
-
-/* .vertical-line {
-    padding-left: calc(100%/12);
-}
-
-.vertical-line>div:nth-of-type(odd) {
-    border-left: 3px solid #555;
-    border-right: 3px solid #555;
-    width: calc(100%/6);
-    justify-content: space-around;
-    height: 20px;
-} */
-
 .icons>img {
     height: 25px;
 }
@@ -120,13 +109,13 @@
 
 .vertical-line>div:nth-of-type(even) {
     font-size: 1.2em;
-    color: #fff;
+    color: #aaa;
 }
 
 .vertical-line>div {
     box-sizing: content-box;
     align-self: center;
-    color: #000;
+    color: #fff;
     font-size: 2rem;
     justify-content: space-around;
     font-family: Arial, Helvetica, sans-serif;

@@ -1,5 +1,7 @@
+/* middle-section */
+
 .common-bg {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #aaa;
     border-radius: 2em 2em 0 0;
 }
@@ -12,6 +14,10 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
+}
+
+.city-cards p {
+    font-size: 1.2rem;
 }
 
 .filters {
@@ -55,24 +61,44 @@
 
 .card-container {
     display: flex;
-    padding: 2em;
+    padding: 1em;
     flex-wrap: nowrap;
     align-items: center;
+    height: auto;
     justify-content: space-around;
 }
 
-#frontarrow,
-#backarrow {
+#forwardArrow,
+#backArrow {
     width: 30px;
+    height: 30px;
     cursor: pointer;
     padding: 10px;
     background: #fff;
     border-radius: 50%;
 }
 
-#frontarrow:hover,
-#backarrow:hover {
-    transform: scale(1.1);
+#forwardArrow:hover,
+#backArrow:hover {
+    transform: scale(0.9);
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0rem rgba(200, 200, 200, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 0 .5rem rgba(200, 200, 200, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1rem rgba(200, 200, 200, 0);
+    }
+}
+
+#forwardArrow:active,
+#backArrow:active {
+    background: #444;
 }
 
 .card-box {
@@ -91,7 +117,7 @@
 
 .card {
     cursor: pointer;
-    background: url('../images/city-icons/newdelhi.svg') 70px 130px/300px no-repeat, var(--bg-dark-grey-tile);
+    background: url('../images/city-icons/kolkata.svg') 70px 130px/270px no-repeat, var(--bg-dark-grey-tile);
     width: 270px;
     min-width: 270px;
     height: 270px;
@@ -99,12 +125,15 @@
     border-radius: 1.5rem;
     margin: 1rem;
     line-height: 2.5rem;
-    opacity: 0.9;
+    opacity: 1;
+    box-shadow: 20px 20px 10px #000;
+    transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
-    opacity: 1;
-    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 0px 0px 10px 0px #000;
+    transform: scale(0.95);
 }
 
 .card b {

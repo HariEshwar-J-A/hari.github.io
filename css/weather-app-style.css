@@ -1,7 +1,7 @@
-@import "top-section.css";
-@import "middle-section.css";
-@import url('bottom-section.css');
 @import url('vars.css');
+@import url('top-section.css');
+@import url('middle-section.css');
+@import url('bottom-section.css');
 * {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -9,12 +9,11 @@
     font-size: 1rem;
 }
 
+
+/* Body of the Web page */
+
 .main-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/rainy_bg.jpg');
-    /* 0px 0px/cover no-repeat fixed; */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/rainy_bg.jpg') 0px 0px/cover no-repeat fixed;
     animation-name: lightning;
     animation-duration: 10s;
     animation-iteration-count: 2;
@@ -47,13 +46,6 @@
     100% {
         background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/rainy_bg.jpg");
     }
-}
-
-footer {
-    color: #aaa;
-    background-color: rgba(0, 0, 0, 1);
-    text-align: center;
-    font-size: smaller;
 }
 
 
@@ -117,8 +109,8 @@ footer {
     }
     .card {
         background: url('../images/city-icons/newdelhi.svg') 90px 120px/200px no-repeat, rgba(50, 50, 50, 0.4);
-        width: auto;
-        min-width: 200px;
+        width: 20vw;
+        min-width: 50vw;
     }
     /* Bottom Section */
     .cont-header {
@@ -129,11 +121,11 @@ footer {
         margin: 10px;
     }
     .cont-header .selector {
-        width: 100vw;
+        width: 40vw;
     }
     .sort {
         margin: 10px;
-        width: 45vw;
+        width: fit-content;
     }
     .cont-card-box {
         grid-template-columns: 1fr;

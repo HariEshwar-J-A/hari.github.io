@@ -1,3 +1,5 @@
+/* bottom-section */
+
 .cont-header {
     display: flex;
     width: 90%;
@@ -24,11 +26,26 @@
     cursor: pointer;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 15vw;
+    padding: 0.3rem;
+    border: 1px solid #222;
+    border-radius: 0.4rem;
+    background-position: center;
+    transition: background 0.8s;
 }
 
 .sort:hover {
     transform: scale(1.2);
+    background: #000 radial-gradient(circle, transparent 4%, #000 3%) center/15000%;
+    border: 1px solid #ddd;
+}
+
+.sort:active {
+    background-color: #aaa;
+    background-size: 100%;
+    border: 0;
+    transition: background 0s;
 }
 
 .cont-card-box {
@@ -53,18 +70,26 @@
     padding: 10px 10px 10px 10px;
     color: var(--primary-white);
     background-color: var(--bg-grey-tile);
-    transition: all 0.2s ease-in;
+    box-shadow: 15px 15px 10px #000;
+    transition: all 0.3s ease-in;
 }
 
 .cont-card:hover {
-    transform: scale(1.05);
+    box-shadow: 0 0 10px 10px rgba(200, 200, 200, 0.5);
+    background: var(--bg-grey-tile) radial-gradient(circle, transparent 1%, var(--bg-grey-tile) 3%) center/15000%;
+    transform: scale(0.95);
+}
+
+.cont-card:active {
+    background-color: rgba(200, 200, 200, 1);
+    background-size: 100%;
+    transition: background 0s;
 }
 
 .cont-card .cont {
     font-size: 20px;
     padding-top: 10px;
     color: var(--bright-yellow-text);
-    /* rgb(241, 234, 87); */
 }
 
 .cont-card .temp {
@@ -80,4 +105,11 @@
 .cont-card .humid {
     justify-self: end;
     align-self: flex-end;
+}
+
+footer {
+    color: #aaa;
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: smaller;
 }
