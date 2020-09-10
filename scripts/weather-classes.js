@@ -53,7 +53,7 @@ class CityCards extends ContinentCards {
     };
 
     getBG() {
-        return `url('../images/city-icons/${this.cityName.toLowerCase()}.svg') 100px 100px/150px no-repeat, var(--bg-dark-grey-tile)`;
+        return `url('${location.href}/images/city-icons/${this.cityName.toLowerCase()}.svg') 100px 100px/150px no-repeat, var(--bg-dark-grey-tile)`;
     };
 }
 
