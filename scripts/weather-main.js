@@ -261,5 +261,5 @@ import { ContinentCards, CityCards, CitySelection } from './weather-classes.js';
 
     // ----- Bottom Section Events-----
     continentSort.addEventListener('click', (e) => changeArrow(continentSort.children[1].children[0]));
-    temperatureSort.addEventListener('click', (e) => changeArrow(continentSort.children[1].children[0]));
+    temperatureSort.addEventListener('click', (e) => changeArrow(temperatureSort.children[1].children[0]));
 })();
