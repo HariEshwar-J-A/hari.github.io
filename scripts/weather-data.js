@@ -1,8 +1,10 @@
+const baseURL = 'https://weather-app-api.glitch.me/';
+
 // Update TimeLine for currect city selection
 export function getNextFiveHrs(city_Date_Time_Name) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://soliton.glitch.me/hourly-forecast', true)
+        xhr.open('POST', baseURL + 'hourly-forecast', true)
         xhr.responseType = 'json';
         xhr.setRequestHeader('Content-type', 'application/json');
         var data = {
@@ -19,7 +21,7 @@ export function getNextFiveHrs(city_Date_Time_Name) {
 export function getCityDetails() {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://soliton.glitch.me/all-timezone-cities', true);
+        xhr.open('GET', baseURL + 'all-timezone-cities', true);
         xhr.responseType = 'json';
         xhr.send();
         xhr.onload = (() => {

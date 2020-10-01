@@ -75,6 +75,9 @@ import { ContinentCards, CityCards, CitySelection } from './weather-classes.js';
         let jsonData = data.find((d) => d.cityName === document.getElementById('city').value);
         if (jsonData) {
             let city = new ContinentCards(jsonData);
+            if (city.time.split(':')[1] == '00') {
+                if (city.time.split(':')[2].split(' ')[0] == '00') { location.reload() }
+            }
             document.getElementById('headDateAndTime').innerHTML = `<b>${city.time.split(' ')[0]} </b><img src="images/${city.meridiem.toLowerCase()}State.svg" alt='AM'><br><span>${city.getRequiredDateFormat()}</span>`;
         };
     }
@@ -91,7 +94,7 @@ import { ContinentCards, CityCards, CitySelection } from './weather-classes.js';
         cardBox.innerHTML = '';
 
         // Set each city parameters to its respective city card
-        let createcityCards = function(cities) {
+        let createCityCards = function(cities) {
             let cardCount = cities.length;
             let requiredCount = displayCardCount < cardCount ? displayCardCount : cardCount;
             for (let i = 0; i < requiredCount; i++) {
@@ -103,13 +106,13 @@ import { ContinentCards, CityCards, CitySelection } from './weather-classes.js';
         //Apply filter (Sunny, Snowy, Rainy) on the available city data
         if (document.getElementsByClassName('active-icon')[0].id === 'sunny-cities') {
             let cities = dataArray.filter((city) => (parseInt(city.temperature) > 29));
-            createcityCards(cities);
+            createCityCards(cities);
         } else if (document.getElementsByClassName('active-icon')[0].id === 'snowy-cities') {
             let cities = dataArray.filter((city) => (parseInt(city.temperature) <= 29 && parseInt(city.temperature) >= 20));
-            createcityCards(cities);
+            createCityCards(cities);
         } else {
             let cities = dataArray.filter((city) => (parseInt(city.temperature) < 20));
-            createcityCards(cities);
+            createCityCards(cities);
         }
 
         if (cardBox.scrollWidth > cardBox.clientWidth) { scrollArrowsAppear(); } else { scrollArrowsDisappear(); }

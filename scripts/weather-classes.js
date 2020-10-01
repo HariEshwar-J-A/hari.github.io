@@ -51,7 +51,6 @@ class CityCards extends ContinentCards {
             <div class="precp"><img src="images/precipitationIcon.svg" alt="precipitationIcon">${this.precipitation}</div>
         </div>`;
     };
-
     getBG() {
         return `url('${location.href.split('/').slice(0,-1).join('/')}/images/city-icons/${this.cityName.toLowerCase()}.svg') 100px 100px/150px no-repeat, var(--bg-dark-grey-tile)`;
     };
