@@ -108,7 +108,7 @@ class CityCards extends ContinentCards {
      * @memberof CityCards
      */
     getBG() {
-        return `url('${location.href.split('/').slice(0,-1).join('/')}/../assets/city-icons/${this.cityName.toLowerCase()}.svg') 120px 100px/200px no-repeat, var(--bg-dark-grey-tile)`;
+        return `url('${location.href}/../assets/city-icons/${this.cityName.toLowerCase()}.svg') 120px 100px/200px no-repeat, var(--bg-dark-grey-tile)`;
     };
 }
 
