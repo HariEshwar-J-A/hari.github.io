@@ -1,0 +1,30 @@
+{
+    "name": "hari.github.io",
+    "version": "1.0.0",
+    "description": "Weather App Server",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server",
+        "dev": "nodemon server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HariEshwar-J-A/hari.github.io.git"
+    },
+    "keywords": [
+        "Weather-App",
+        "Application"
+    ],
+    "author": "HariEshwar J A",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HariEshwar-J-A/hari.github.io/issues"
+    },
+    "homepage": "https://github.com/HariEshwar-J-A/hari.github.io#readme",
+    "dependencies": {
+        "uuid": "^8.3.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}

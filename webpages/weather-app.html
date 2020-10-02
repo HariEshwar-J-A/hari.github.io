@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#aaa">
     <title>Weather-App</title>
-    <link rel="stylesheet" href="styles/weather-app-style.css">
+    <link rel="stylesheet" href="../styles/weather-app-style.css">
 
     <!-- To preload the css files for faster page loading -->
-    <link rel="preload" href="styles/weather-app-style.css" as="style">
-    <link rel='preload' href="styles/top-section.css" as="style">
-    <link rel='preload' href="styles/middle-section.css" as="style">
-    <link rel='preload' href="styles/bottom-section.css" as="style">
-    <link rel="icon" type="image/jpg" href="assets/head-icons/headSample.webp">
+    <link rel="preload" href="../styles/weather-app-style.css" as="style">
+    <link rel='preload' href="../styles/top-section.css" as="style">
+    <link rel='preload' href="../styles/middle-section.css" as="style">
+    <link rel='preload' href="../styles/bottom-section.css" as="style">
+    <link rel="icon" type="image/jpg" href="../assets/head-icons/headSample.webp">
 
     <!-- To use Roboto font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -30,7 +30,7 @@
         <!-- City Details -->
         <div class='city-details'>
             <div class="city-img">
-                <img src="assets/city-icons/kolkata.svg" alt="Kolkata">
+                <img src="../assets/city-icons/kolkata.svg" alt="Kolkata">
             </div>
             <form class="city-list">
                 <label for="city">City Input</label>
@@ -41,7 +41,7 @@
             <p class="temp-c" id="headTempc">Temp <sup>&#8728</sup>C <br><br><b></b></p>
             <p class="humidity" id="headHumid">Humidity<br><br><b></b></p>
             <div class="blank"></div>
-            <p class="date-time" id="headDateAndTime"><b></b><img src="assets/meridiem-icons/amState.svg" alt="AM/PM"><br><span>01-Mar-2020</span></p>
+            <p class="date-time" id="headDateAndTime"><b></b><img src="../assets/meridiem-icons/amState.svg" alt="AM/PM"><br><span>01-Mar-2020</span></p>
             <p class="temp-f" id="headTempf">Temp F<br><br><b></b></p>
             <p class="precipitation" id="headPrecipitation">Precipitation<br><br><b></b></p>
         </div>
@@ -70,22 +70,22 @@
                 <div class="header">
                     <p>Top Cities around world</p>
                     <div class="filters" title="Filters">
-                        <div class="active-icon" id="sunny-cities" title="Filters based on temperature -> Sunny"><img src="assets/climate-icons/sunnyIcon.svg" alt="icon" width="25px"></div>
-                        <div id="snowy-cities" title="Filters based on temperature -> Snowy"><img src="assets/climate-icons/snowflakeIcon.svg" alt="icon" width="25px"></div>
-                        <div id="rainy-cities" title="Filters based on temperature -> Rainy"><img src="assets/climate-icons/rainyIcon.svg" alt="icon" width="25px"></div>
+                        <div class="active-icon" id="sunny-cities" title="Filters based on temperature -> Sunny"><img src="../assets/climate-icons/sunnyIcon.svg" alt="icon" width="25px"></div>
+                        <div id="snowy-cities" title="Filters based on temperature -> Snowy"><img src="../assets/climate-icons/snowflakeIcon.svg" alt="icon" width="25px"></div>
+                        <div id="rainy-cities" title="Filters based on temperature -> Rainy"><img src="../assets/climate-icons/rainyIcon.svg" alt="icon" width="25px"></div>
                         <label for="display-top">Display Top</label>
                         <input title="Display Top N-Elements" id="display-top" type="number" step="1" min="3" max="10" value="4">
                     </div>
                 </div>
                 <div class="card-container">
                     <div class="buttons" title="click to move ONE CARD, Double click to go to END">
-                        <div id="backArrow"><img src="assets/navigation-icons/backwardArrow.svg" alt="backArrow"></div>
+                        <div id="backArrow"><img src="../assets/navigation-icons/backwardArrow.svg" alt="backArrow"></div>
                         <!-- <button class="endButtons" id="leftEnd">Go to Start</button> -->
                     </div>
                     <div class="card-box">
                     </div>
                     <div class="buttons" title="click to move ONE CARD, Double click to go to END">
-                        <div id="forwardArrow"><img src="assets/navigation-icons/forwardArrow.svg" alt="forwardArrow"></div>
+                        <div id="forwardArrow"><img src="../assets/navigation-icons/forwardArrow.svg" alt="forwardArrow"></div>
                         <!-- <button class="endButtons" id="rightEnd">Go to End</button> -->
                     </div>
                 </div>
@@ -99,11 +99,11 @@
                 <div class="selector">
                     <div class="sort cont-key" title="click to SORT the cards based on Continents">
                         <div>Continent</div>
-                        <div class="up-down-icon"><img src="assets/navigation-icons/arrowDown.svg" alt="arrow" width="20px"></div>
+                        <div class="up-down-icon"><img src="../assets/navigation-icons/arrowDown.svg" alt="arrow" width="20px"></div>
                     </div>
                     <div class="sort temp-key" title="click to SORT the Continent cards based on Temperature">
                         <div>Temperature</div>
-                        <div class="up-down-icon"><img src="assets/navigation-icons/arrowUp.svg" alt="arrow" width="20px"></div>
+                        <div class="up-down-icon"><img src="../assets/navigation-icons/arrowUp.svg" alt="arrow" width="20px"></div>
                     </div>
                 </div>
             </div>
@@ -111,9 +111,9 @@
             </div>
         </section>
     </section>
-    <script type="module" src="scripts/weather-classes.js"></script>
-    <script type="module" src="scripts/weather-data.js"></script>
-    <script type="module" src="scripts/weather-main.js"></script>
+    <script type="module" src="../scripts/weather-classes.js"></script>
+    <script type="module" src="../scripts/weather-data.js"></script>
+    <script type="module" src="../scripts/weather-main.js"></script>
 </body>
 
 <!-- Copyrights Footer -->
