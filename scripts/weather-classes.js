@@ -62,7 +62,7 @@ class ContinentCards {
         <div class="cont">${this.timeZone.split('/')[0]}</div>
         <div class="temp">${this.temperature}</div>
         <div class="info">${this.cityName}, ${this.getHoursMinutes()} ${this.meridiem}</div> 
-        <div class="humid"><img src="../assets/climate-icons/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
+        <div class="humid"><img src="assets/climate-icons/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
         </div>`;
     }
 }
@@ -95,8 +95,8 @@ class CityCards extends ContinentCards {
             </div>
             <div class="time"><b>${this.getHoursMinutes()} ${this.meridiem}</b></div>
             <div class="date"><b>${this.getRequiredDateFormat()}</b></div>
-            <div class="humid"><img src="../assets/climate-icons/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
-            <div class="precp"><img src="../assets/climate-icons/precipitationIcon.svg" alt="precipitationIcon">${this.precipitation}</div>
+            <div class="humid"><img src="assets/climate-icons/humidityIcon.svg" alt="humidityIcon">${this.humidity}</div>
+            <div class="precp"><img src="assets/climate-icons/precipitationIcon.svg" alt="precipitationIcon">${this.precipitation}</div>
         </div>`;
     };
 
@@ -149,7 +149,7 @@ class CitySelection extends CityCards {
      */
     populateTimeLine(nextFiveHrs, headTimeArray, headVerticalLineArray, headIconArray, headTempArray) {
         headTimeArray.innerHTML = `<p id='time1'>NOW</p>`;
-        headIconArray.innerHTML = `<img id="image1" src="../assets/climate-icons/${this.classifyIcons(parseInt(this.temperature))}Icon.svg" alt="icon">`;
+        headIconArray.innerHTML = `<img id="image1" src="assets/climate-icons/${this.classifyIcons(parseInt(this.temperature))}Icon.svg" alt="icon">`;
         headTempArray.innerHTML = `<p id="temp1">${parseInt(this.temperature)}</p>`;
         headVerticalLineArray.innerHTML = '<div class="vl">I</div>';
         let meridiemNew = this.meridiem;
@@ -163,7 +163,7 @@ class CitySelection extends CityCards {
             i++;
             headTimeArray.innerHTML += `<p id='time${i}'>${hours} ${meridiemNew}</p>`;
             headVerticalLineArray.innerHTML += '<div class="vl">I</div> <div class="vl">I</div>';
-            headIconArray.innerHTML += `<img id="image${i}" src="../assets/climate-icons/${this.classifyIcons(parseInt(temperature))}Icon.svg" alt="icon">`;
+            headIconArray.innerHTML += `<img id="image${i}" src="assets/climate-icons/${this.classifyIcons(parseInt(temperature))}Icon.svg" alt="icon">`;
             headTempArray.innerHTML += `<p id="temp${i}">${parseInt(temperature)}</p>`;
         });
     }

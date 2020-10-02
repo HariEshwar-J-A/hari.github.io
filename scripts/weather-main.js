@@ -54,12 +54,12 @@ import { ContinentCards, CityCards, CitySelection } from './weather-classes.js';
 
             // -- City Details --
             let city = new CitySelection(data[index]);
-            document.getElementsByClassName('city-img')[0].innerHTML = `<img src="../assets/city-icons/${selectedCity}.svg" alt="${cityInput}">`;
+            document.getElementsByClassName('city-img')[0].innerHTML = `<img src="assets/city-icons/${selectedCity}.svg" alt="${cityInput}">`;
             document.getElementById('headTempc').innerHTML = `Temp <sup>&#8728</sup>C <br><br><b>${city.temperature}</b>`;
             document.getElementById('headHumid').innerHTML = `Humidity<br><br><b>${city.humidity}</b>`;
             document.getElementById('headTempf').innerHTML = `Temp F<br><br><b>${city.celciusToFarenheit()}</b>`
             document.getElementById('headPrecipitation').innerHTML = `Precipitation<br><br><b>${city.precipitation}</b>`;
-            document.getElementById('headDateAndTime').innerHTML = `<b>${city.time.split('')[0]} </b><img src="../assets/meridiem-icons/${city.meridiem.toLowerCase()}State.svg" alt='AM/PM'><br><span>${city.getRequiredDateFormat()}</span>`;
+            document.getElementById('headDateAndTime').innerHTML = `<b>${city.time.split('')[0]} </b><img src="assets/meridiem-icons/${city.meridiem.toLowerCase()}State.svg" alt='AM/PM'><br><span>${city.getRequiredDateFormat()}</span>`;
 
             // -- TimeLine --
             let nextFiveHrs;
@@ -81,7 +81,7 @@ import { ContinentCards, CityCards, CitySelection } from './weather-classes.js';
         let jsonData = data.find((d) => d.cityName === document.getElementById('city').value);
         if (jsonData) {
             let city = new ContinentCards(jsonData);
-            document.getElementById('headDateAndTime').innerHTML = `<b>${city.time.split(' ')[0]} </b><img src="../assets/meridiem-icons/${city.meridiem.toLowerCase()}State.svg" alt='AM/PM'><br><span>${city.getRequiredDateFormat()}</span>`;
+            document.getElementById('headDateAndTime').innerHTML = `<b>${city.time.split(' ')[0]} </b><img src="assets/meridiem-icons/${city.meridiem.toLowerCase()}State.svg" alt='AM/PM'><br><span>${city.getRequiredDateFormat()}</span>`;
         };
     }
 
